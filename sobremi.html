@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es" data-bs-theme="fw-light">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="theme-color" content="#">
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Mi Portafolio con Bootstrap</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous"> 
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoG6VJKhH/Pr7K7P1pzpE+9j0Jv5YQ/d6c+JkU5zC6e2MZw" crossorigin="anonymous"></script>
+
+    </head>
+    <body>
+        <header data-bstheme="auto">
+            <div class="collapse text-bg-light" id="navbarHeader">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-8 col-md-7 py-4">
+                            <h4>Hola!</h4>
+                            <p> Soy Catalina Bustos, tengo 22 años y soy estudiante de Diseño Integral en la PUC. Veo el diseño como una herramienta para transformar y mejorar realidades. </p>
+                            <div>
+                            <h4>Contacto</h4>
+                            <ul class="list-unstyled">
+                                <li><a href="https://www.behance.net/catalinbustosj" target="_blank" class="text-black">Behance</a></li>
+                                <li><a href="https://www.linkedin.com/in/catalina-bustos-jara-680b91311/" target="_blank" class="text-black">LinkedIn</a></li>
+                                <li><a href="mailto:catitabustos2003@gmail.com" class="text-black">Email</a></li>
+                            </ul>
+                        </div>
+                        </div>
+                        <div class="col-sm-4 offset-md-1 py-4">
+                            <h4 class="ms-2">Habilidades</h4>
+                            <table id="aqui" class="table table-borderless table-hover table-light"></table>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="navbar navbar-light bg-light shadow-sm">
+                <div class="container">
+                    <a href="#" class="navbar-brand d-flex align-items-center">
+
+
+
+
+                        <strong>Mi portafolio</strong>
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                </div>
+            </div>
+        </header>
+        <main>
+            <section class="py-5 text-center container">
+                <div class="row py-lg-5">
+                    <div class="col-lg-6 col-md-8 mx-auto">
+                        <h1 class="fw-light">⊹ Catalina Bustos ⊹</h1>
+                        <p class="lead text-body-secondary">
+                            Portafolio de trabajos universitarios.
+                        </p>
+                
+              <a href="index.html" class="btn btn-secondary my-2">Portafolio</a>
+
+              <a href="sobremi.html" class="btn btn-secondary my-2" style="background-color: #C3405F; border: none; color: white;">Sobre mí</a>
+            </p>
+
+                    </div>
+                </div>
+            </section>
+
+<section id="grafico">
+                <div style="max-width: 800px; margin: 50px auto; text-align: center; padding: 20px; background: white; border-radius: 10px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+                    <h2 style="margin-bottom: 30px; color: #333;">Mis promedios en Taller de Diseño UC</h2>
+                    <div style="width: 100%; height: 400px;">
+                        <canvas id="myLineChart"></canvas>
+                    </div>
+                </div>
+
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.0/chart.umd.min.js"></script>
+                <script>
+                    const ctx = document.getElementById("myLineChart").getContext("2d");
+
+                    const data = {
+                        labels: ["Taller 1", "Taller 2", "Taller 3", "Taller 4", "Taller 5", "Taller 6"],
+                        datasets: [
+                            {
+                                label: "Talleres de Diseño",
+                                data: [5.5, 5.8, 5.9, 6.3, 6.2, 6.7],
+                                borderColor: "rgba(138, 30, 56, 1)",
+                                backgroundColor: "rgb(238, 132, 157)",
+                                tension: 0.1,
+                            },
+                        ],
+                    };
+
+                    const config = {
+                        type: "line",
+                        data: data,
+                        options: {
+                            responsive: true,
+                            maintainAspectRatio: true,
+                            plugins: {
+                                legend: {
+                                    position: "top",
+                                },
+                            },
+                        },
+                    };
+
+                    const myLineChart = new Chart(ctx, config);
+                </script>
+            </section>
+
+
+            <div class="album py-5 bg-body-tertiary">
+                <div class="container">
+                    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3" id="porotito"></div>
+                </div>
+            </div>
+        </main>
+        <footer class="text-body-secondary py-5">
+            <div class="container">
+                <p class="float-end mb-1"><a href="#">Volver al comienzo</a></p>
+                <p class="mb-1">&copy; Catalina Bustos 2025</p>
+            </div>
+        </footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" 
+                integrity="sha384-ENjdO4Dr2bkBIFxQpeoG6VJKhH/Pr7K7P1pzpE+9j0Jv5YQ/d6c+JkU5zC6e2MZw" 
+                crossorigin="anonymous"></script>
+
+
+
+
+    </body>
+</html>
